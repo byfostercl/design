@@ -21,8 +21,10 @@ document.addEventListener(
             3000;
 
 
+
         carousels.forEach(
             (carousel) => {
+
 
                 const viewport =
                     carousel.querySelector(
@@ -86,7 +88,7 @@ document.addEventListener(
 
 
                 /* =========================================
-                   HELPERS
+                   RESPONSIVE VISIBLE ITEMS
                 ========================================= */
 
                 function getVisibleSlides() {
@@ -95,7 +97,9 @@ document.addEventListener(
                         window.innerWidth <=
                         600
                     ) {
+
                         return 1;
+
                     }
 
 
@@ -103,7 +107,9 @@ document.addEventListener(
                         window.innerWidth <=
                         950
                     ) {
+
                         return 2;
+
                     }
 
 
@@ -111,6 +117,11 @@ document.addEventListener(
 
                 }
 
+
+
+                /* =========================================
+                   MAXIMUM POSITION
+                ========================================= */
 
                 function getMaximumIndex() {
 
@@ -122,6 +133,11 @@ document.addEventListener(
 
                 }
 
+
+
+                /* =========================================
+                   NUMBER FORMAT
+                ========================================= */
 
                 function formatNumber(
                     number
@@ -137,11 +153,17 @@ document.addEventListener(
                 }
 
 
+
+                /* =========================================
+                   COUNTER
+                ========================================= */
+
                 function updateCounter() {
 
                     currentLabel.textContent =
                         formatNumber(
-                            currentIndex + 1
+                            currentIndex +
+                            1
                         );
 
 
@@ -155,7 +177,7 @@ document.addEventListener(
 
 
                 /* =========================================
-                   POSITION
+                   POSITION CAROUSEL
                 ========================================= */
 
                 function updateCarousel(
@@ -170,8 +192,10 @@ document.addEventListener(
                         currentIndex >
                         maxIndex
                     ) {
+
                         currentIndex =
                             maxIndex;
+
                     }
 
 
@@ -182,7 +206,9 @@ document.addEventListener(
                     if (
                         !firstSlide
                     ) {
+
                         return;
+
                     }
 
 
@@ -201,7 +227,8 @@ document.addEventListener(
 
 
                     const slideWidth =
-                        firstSlide.getBoundingClientRect()
+                        firstSlide
+                            .getBoundingClientRect()
                             .width;
 
 
@@ -225,6 +252,11 @@ document.addEventListener(
                             `translate3d(-${offset}px, 0, 0)`;
 
 
+                        /*
+                        Fuerza al navegador a aplicar
+                        temporalmente el cambio.
+                        */
+
                         track.offsetHeight;
 
 
@@ -246,7 +278,7 @@ document.addEventListener(
 
 
                 /* =========================================
-                   NEXT / PREVIOUS
+                   NEXT
                 ========================================= */
 
                 function nextSlide() {
@@ -275,6 +307,11 @@ document.addEventListener(
 
                 }
 
+
+
+                /* =========================================
+                   PREVIOUS
+                ========================================= */
 
                 function previousSlide() {
 
@@ -327,9 +364,26 @@ document.addEventListener(
                 }
 
 
+
                 function startAutoplay() {
 
                     stopAutoplay();
+
+
+                    /*
+                    Si no existen suficientes imágenes
+                    para mover el carrusel, no iniciamos
+                    el temporizador.
+                    */
+
+                    if (
+                        getMaximumIndex() ===
+                        0
+                    ) {
+
+                        return;
+
+                    }
 
 
                     autoplayTimer =
@@ -339,6 +393,7 @@ document.addEventListener(
                         );
 
                 }
+
 
 
                 function restartAutoplay() {
@@ -406,7 +461,8 @@ document.addEventListener(
                     (event) => {
 
                         touchStartX =
-                            event.changedTouches[0]
+                            event
+                                .changedTouches[0]
                                 .screenX;
 
 
@@ -425,7 +481,8 @@ document.addEventListener(
                     (event) => {
 
                         touchEndX =
-                            event.changedTouches[0]
+                            event
+                                .changedTouches[0]
                                 .screenX;
 
 
@@ -435,7 +492,9 @@ document.addEventListener(
 
 
                         if (
-                            Math.abs(distance) >
+                            Math.abs(
+                                distance
+                            ) >
                             45
                         ) {
 
@@ -467,7 +526,7 @@ document.addEventListener(
 
 
                 /* =========================================
-                   RESIZE
+                   WINDOW RESIZE
                 ========================================= */
 
                 window.addEventListener(
@@ -477,6 +536,9 @@ document.addEventListener(
                         updateCarousel(
                             false
                         );
+
+
+                        restartAutoplay();
 
                     }
                 );
@@ -489,9 +551,11 @@ document.addEventListener(
 
                 updateCounter();
 
+
                 updateCarousel(
                     false
                 );
+
 
                 startAutoplay();
 
@@ -502,6 +566,10 @@ document.addEventListener(
 
         /* =================================================
            FULLSCREEN VIEWER
+
+           Funciona tanto para:
+           - carruseles
+           - category 04
         ================================================= */
 
         const viewer =
@@ -546,7 +614,7 @@ document.addEventListener(
             );
 
 
-        let activeSlides =
+        let activeItems =
             [];
 
 
@@ -554,9 +622,13 @@ document.addEventListener(
             0;
 
 
+        let lastFocusedItem =
+            null;
+
+
 
         /* =============================================
-           FORMAT COUNTER
+           VIEWER NUMBER FORMAT
         ============================================= */
 
         function formatViewerNumber(
@@ -575,26 +647,28 @@ document.addEventListener(
 
 
         /* =============================================
-           UPDATE IMAGE
+           UPDATE VIEWER
         ============================================= */
 
         function updateViewer() {
 
-            const slide =
-                activeSlides[
+            const item =
+                activeItems[
                     activeImageIndex
                 ];
 
 
             if (
-                !slide
+                !item
             ) {
+
                 return;
+
             }
 
 
             const imagePath =
-                slide.dataset.image;
+                item.dataset.image;
 
 
             viewerImage.src =
@@ -610,7 +684,7 @@ document.addEventListener(
 
             viewerTotal.textContent =
                 formatViewerNumber(
-                    activeSlides.length
+                    activeItems.length
                 );
 
         }
@@ -618,31 +692,44 @@ document.addEventListener(
 
 
         /* =============================================
-           OPEN
+           OPEN VIEWER
         ============================================= */
 
         function openViewer(
-            clickedSlide
+            clickedItem
         ) {
 
-            const carousel =
-                clickedSlide.closest(
-                    "[data-carousel]"
+            const gallery =
+                clickedItem.closest(
+                    "[data-gallery-group]"
                 );
 
 
-            activeSlides =
+            if (
+                !gallery
+            ) {
+
+                return;
+
+            }
+
+
+            activeItems =
                 Array.from(
-                    carousel.querySelectorAll(
-                        ".portfolio-slide"
+                    gallery.querySelectorAll(
+                        "[data-viewer-item]"
                     )
                 );
 
 
             activeImageIndex =
-                activeSlides.indexOf(
-                    clickedSlide
+                activeItems.indexOf(
+                    clickedItem
                 );
+
+
+            lastFocusedItem =
+                clickedItem;
 
 
             updateViewer();
@@ -671,7 +758,7 @@ document.addEventListener(
 
 
         /* =============================================
-           CLOSE
+           CLOSE VIEWER
         ============================================= */
 
         function closeViewer() {
@@ -695,38 +782,40 @@ document.addEventListener(
             viewerImage.src =
                 "";
 
+
+            if (
+                lastFocusedItem
+            ) {
+
+                lastFocusedItem.focus();
+
+            }
+
         }
 
 
 
         /* =============================================
-           NEXT / PREVIOUS
+           NEXT VIEWER IMAGE
         ============================================= */
 
         function nextViewerImage() {
+
+            if (
+                !activeItems.length
+            ) {
+
+                return;
+
+            }
+
 
             activeImageIndex =
                 (
                     activeImageIndex +
                     1
                 ) %
-                activeSlides.length;
-
-
-            updateViewer();
-
-        }
-
-
-        function previousViewerImage() {
-
-            activeImageIndex =
-                (
-                    activeImageIndex -
-                    1 +
-                    activeSlides.length
-                ) %
-                activeSlides.length;
+                activeItems.length;
 
 
             updateViewer();
@@ -736,20 +825,50 @@ document.addEventListener(
 
 
         /* =============================================
-           OPEN FROM SLIDE
+           PREVIOUS VIEWER IMAGE
+        ============================================= */
+
+        function previousViewerImage() {
+
+            if (
+                !activeItems.length
+            ) {
+
+                return;
+
+            }
+
+
+            activeImageIndex =
+                (
+                    activeImageIndex -
+                    1 +
+                    activeItems.length
+                ) %
+                activeItems.length;
+
+
+            updateViewer();
+
+        }
+
+
+
+        /* =============================================
+           OPEN FROM ANY PORTFOLIO ITEM
         ============================================= */
 
         document.querySelectorAll(
-            ".portfolio-slide"
+            "[data-viewer-item]"
         ).forEach(
-            (slide) => {
+            (item) => {
 
-                slide.addEventListener(
+                item.addEventListener(
                     "click",
                     () => {
 
                         openViewer(
-                            slide
+                            item
                         );
 
                     }
@@ -818,7 +937,9 @@ document.addEventListener(
                         "is-open"
                     )
                 ) {
+
                     return;
+
                 }
 
 
@@ -873,7 +994,8 @@ document.addEventListener(
             (event) => {
 
                 viewerTouchStartX =
-                    event.changedTouches[0]
+                    event
+                        .changedTouches[0]
                         .screenX;
 
             },
@@ -889,7 +1011,8 @@ document.addEventListener(
             (event) => {
 
                 viewerTouchEndX =
-                    event.changedTouches[0]
+                    event
+                        .changedTouches[0]
                         .screenX;
 
 
@@ -899,10 +1022,14 @@ document.addEventListener(
 
 
                 if (
-                    Math.abs(distance) <
+                    Math.abs(
+                        distance
+                    ) <
                     45
                 ) {
+
                     return;
+
                 }
 
 
