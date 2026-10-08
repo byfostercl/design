@@ -12,15 +12,14 @@
 
     <meta
         name="description"
-        content="Portfolio de diseño gráfico de Matías Báez. Selección de piezas visuales para eventos, marcas y comunicación digital."
+        content="Portfolio de diseño de Matías Báez · By Foster. Selección de piezas gráficas y contenido visual para redes sociales."
     >
 
-    <title>Foster / Design — Matías Báez</title>
+    <title>
+        Portfolio de Diseño · By Foster
+    </title>
 
-
-    <!-- =================================================
-         GOOGLE FONTS
-    ================================================== -->
+    <!-- Google Fonts -->
 
     <link
         rel="preconnect"
@@ -34,18 +33,15 @@
     >
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap"
         rel="stylesheet"
     >
 
-
-    <!-- =================================================
-         CSS
-    ================================================== -->
+    <!-- CSS -->
 
     <link
         rel="stylesheet"
-        href="./assets/css/styles.css"
+        href="assets/style.css"
     >
 
 </head>
@@ -54,86 +50,58 @@
 <body>
 
 
-    <!-- =================================================
-         FONDO DECORATIVO / ANIMADO
-    ================================================== -->
+    <!-- =====================================================
+         BACKGROUND
+    ====================================================== -->
 
     <div
-        class="background-effects"
+        class="ambient-background"
         aria-hidden="true"
     >
 
-        <div class="background-orb background-orb--01"></div>
-        <div class="background-orb background-orb--02"></div>
-        <div class="background-orb background-orb--03"></div>
+        <div class="ambient-orb ambient-orb-01"></div>
 
-        <div class="background-grid"></div>
+        <div class="ambient-orb ambient-orb-02"></div>
+
+        <div class="ambient-orb ambient-orb-03"></div>
 
     </div>
 
 
 
-    <!-- =================================================
+    <!-- =====================================================
          HEADER
-    ================================================== -->
+    ====================================================== -->
 
     <header class="site-header">
 
-        <div class="site-header__inner">
+        <a
+            href="./"
+            class="brand"
+            aria-label="Portfolio By Foster"
+        >
+            BY FOSTER
+        </a>
+
+
+        <nav class="header-actions">
 
             <a
-                href="#inicio"
-                class="brand"
-                aria-label="Foster Design - Inicio"
+                href="#contacto"
+                class="header-link"
             >
-
-                <span class="brand__name">
-                    FOSTER
-                </span>
-
-                <span class="brand__separator">
-                    /
-                </span>
-
-                <span class="brand__section">
-                    DESIGN
-                </span>
-
+                Contacto
             </a>
 
-
-            <nav
-                class="site-nav"
-                aria-label="Navegación principal"
+            <a
+                href="https://byfostercl.github.io/"
+                class="main-site-link"
             >
+                Sitio principal
+                <span>↗</span>
+            </a>
 
-                <!--
-                    REEMPLAZAR "#" POR EL LINK REAL
-                    DE INSTAGRAM MÁS ADELANTE
-                -->
-
-                <a
-                    href="#"
-                    class="site-nav__link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Instagram
-                </a>
-
-
-                <a
-                    href="https://byfostercl.github.io/"
-                    class="site-nav__link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    By Foster ↗
-                </a>
-
-            </nav>
-
-        </div>
+        </nav>
 
     </header>
 
@@ -146,62 +114,42 @@
              HERO
         ================================================== -->
 
-        <section
-            class="hero"
-            id="inicio"
-        >
+        <section class="hero">
 
-            <div class="hero__content">
+            <div class="hero-content">
 
-                <p class="eyebrow">
-                    SELECTED WORK
+                <p class="hero-name">
+                    MATÍAS BÁEZ
                 </p>
 
-
-                <h1 class="hero__title">
-                    Matías Báez
+                <h1>
+                    Portfolio
+                    <span>by Foster.</span>
                 </h1>
 
-
-                <p class="hero__lead">
-                    Diseño gráfico para eventos y comunicación digital.
+                <p class="hero-description">
+                    Una selección de piezas gráficas, conceptos
+                    visuales y diseños desarrollados para comunicar
+                    ideas de forma clara, atractiva y funcional.
                 </p>
 
 
-                <p class="hero__description">
-                    Una selección de piezas visuales desarrolladas
-                    para eventos, marcas y proyectos.
-                </p>
-
-
-                <div class="hero__links">
+                <div class="hero-actions">
 
                     <a
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="#portfolio"
+                        class="button button-primary"
                     >
-                        Instagram
+                        Explorar diseños
+                        <span>↓</span>
                     </a>
 
                     <a
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href="#contacto"
+                        class="button button-secondary"
                     >
-                        WhatsApp
-                    </a>
-
-                    <a href="mailto:correo@ejemplo.com">
-                        Email
-                    </a>
-
-                    <a
-                        href="https://byfostercl.github.io/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        By Foster ↗
+                        Hablemos
+                        <span>↗</span>
                     </a>
 
                 </div>
@@ -209,24 +157,22 @@
             </div>
 
 
-            <a
-                href="#portfolio"
-                class="scroll-indicator"
-                aria-label="Explorar proyectos"
+            <div
+                class="hero-decoration"
+                aria-hidden="true"
             >
 
-                <span>
-                    Explorar proyectos
-                </span>
+                <div class="hero-orbit">
 
-                <span
-                    class="scroll-indicator__arrow"
-                    aria-hidden="true"
-                >
-                    ↓
-                </span>
+                    <span class="orbit-point point-01"></span>
+                    <span class="orbit-point point-02"></span>
+                    <span class="orbit-point point-03"></span>
 
-            </a>
+                    <span class="orbit-core"></span>
+
+                </div>
+
+            </div>
 
         </section>
 
@@ -236,273 +182,174 @@
              PORTFOLIO
         ================================================== -->
 
-        <section
-            class="portfolio"
-            id="portfolio"
-        >
+        <div id="portfolio">
 
-            <div class="portfolio__intro">
 
-                <div>
+            <!-- =================================================
+                 CATEGORY 01
+            ================================================== -->
 
-                    <p class="eyebrow">
-                        PORTFOLIO
+            <section class="portfolio-category">
+
+                <div class="category-heading">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            CATEGORÍA 01
+                        </p>
+
+                        <h2>
+                            Diseño para redes sociales
+                        </h2>
+
+                    </div>
+
+
+                    <p>
+                        Piezas visuales desarrolladas para comunicar
+                        contenido, promociones e información dentro
+                        de plataformas digitales.
                     </p>
 
-                    <h2>
-                        Selected Projects
-                    </h2>
-
-                </div>
-
-
-                <p>
-                    Una selección de trabajos organizados
-                    por tipo de proyecto.
-                </p>
-
-            </div>
-
-
-
-            <!-- =================================================
-                 CATEGORÍA 01
-                 EVENT VISUALS
-            ================================================== -->
-
-            <section
-                class="portfolio-category"
-                id="event-visuals"
-            >
-
-                <div class="category-heading">
-
-                    <div class="category-heading__number">
-                        01
-                    </div>
-
-                    <div class="category-heading__content">
-
-                        <h3>
-                            Event Visuals
-                        </h3>
-
-                        <p>
-                            Flyers y piezas visuales desarrolladas
-                            para distintos eventos y campañas.
-                        </p>
-
-                    </div>
-
                 </div>
 
 
                 <div
-                    class="carousel"
+                    class="portfolio-carousel"
                     data-carousel
-                    data-category="01"
+                    aria-label="Diseño para redes sociales"
                 >
 
-                    <div
-                        class="carousel__viewport"
-                        data-carousel-viewport
-                    >
+                    <div class="carousel-viewport">
 
-                        <div
-                            class="carousel__track"
-                            data-carousel-track
-                        >
+                        <div class="carousel-track">
 
-
-                            <!-- DESIGN 01 -->
 
                             <button
-                                class="portfolio-card"
+                                class="portfolio-slide"
                                 type="button"
-                                data-lightbox-image="./assets/images/category-01/design-01.jpg"
-                                data-lightbox-category="Event Visuals"
-                                data-lightbox-index="01"
-                                aria-label="Ver diseño 1 de Event Visuals"
+                                data-image="assets/category-01/img-01.jpg"
+                                aria-label="Ver diseño 1 en pantalla completa"
                             >
-
                                 <img
-                                    src="./assets/images/category-01/design-01.jpg"
-                                    alt="Diseño gráfico de evento 01"
-                                    loading="eager"
-                                >
-
-                                <span class="portfolio-card__number">
-                                    01
-                                </span>
-
-                            </button>
-
-
-                            <!-- DESIGN 02 -->
-
-                            <button
-                                class="portfolio-card"
-                                type="button"
-                                data-lightbox-image="./assets/images/category-01/design-02.jpg"
-                                data-lightbox-category="Event Visuals"
-                                data-lightbox-index="02"
-                                aria-label="Ver diseño 2 de Event Visuals"
-                            >
-
-                                <img
-                                    src="./assets/images/category-01/design-02.jpg"
-                                    alt="Diseño gráfico de evento 02"
+                                    src="assets/category-01/img-01.jpg"
+                                    alt="Diseño de portfolio 01"
                                     loading="lazy"
                                 >
-
-                                <span class="portfolio-card__number">
-                                    02
-                                </span>
-
                             </button>
 
-
-                            <!-- DESIGN 03 -->
 
                             <button
-                                class="portfolio-card"
+                                class="portfolio-slide"
                                 type="button"
-                                data-lightbox-image="./assets/images/category-01/design-03.jpg"
-                                data-lightbox-category="Event Visuals"
-                                data-lightbox-index="03"
-                                aria-label="Ver diseño 3 de Event Visuals"
+                                data-image="assets/category-01/img-02.jpg"
+                                aria-label="Ver diseño 2 en pantalla completa"
                             >
-
                                 <img
-                                    src="./assets/images/category-01/design-03.jpg"
-                                    alt="Diseño gráfico de evento 03"
+                                    src="assets/category-01/img-02.jpg"
+                                    alt="Diseño de portfolio 02"
                                     loading="lazy"
                                 >
-
-                                <span class="portfolio-card__number">
-                                    03
-                                </span>
-
                             </button>
 
-
-                            <!-- DESIGN 04 -->
 
                             <button
-                                class="portfolio-card"
+                                class="portfolio-slide"
                                 type="button"
-                                data-lightbox-image="./assets/images/category-01/design-04.jpg"
-                                data-lightbox-category="Event Visuals"
-                                data-lightbox-index="04"
-                                aria-label="Ver diseño 4 de Event Visuals"
+                                data-image="assets/category-01/img-03.jpg"
+                                aria-label="Ver diseño 3 en pantalla completa"
                             >
-
                                 <img
-                                    src="./assets/images/category-01/design-04.jpg"
-                                    alt="Diseño gráfico de evento 04"
+                                    src="assets/category-01/img-03.jpg"
+                                    alt="Diseño de portfolio 03"
                                     loading="lazy"
                                 >
-
-                                <span class="portfolio-card__number">
-                                    04
-                                </span>
-
                             </button>
 
-
-                            <!-- DESIGN 05 -->
 
                             <button
-                                class="portfolio-card"
+                                class="portfolio-slide"
                                 type="button"
-                                data-lightbox-image="./assets/images/category-01/design-05.jpg"
-                                data-lightbox-category="Event Visuals"
-                                data-lightbox-index="05"
-                                aria-label="Ver diseño 5 de Event Visuals"
+                                data-image="assets/category-01/img-04.jpg"
+                                aria-label="Ver diseño 4 en pantalla completa"
                             >
-
                                 <img
-                                    src="./assets/images/category-01/design-05.jpg"
-                                    alt="Diseño gráfico de evento 05"
+                                    src="assets/category-01/img-04.jpg"
+                                    alt="Diseño de portfolio 04"
                                     loading="lazy"
                                 >
-
-                                <span class="portfolio-card__number">
-                                    05
-                                </span>
-
                             </button>
 
-
-                            <!-- DESIGN 06 -->
 
                             <button
-                                class="portfolio-card"
+                                class="portfolio-slide"
                                 type="button"
-                                data-lightbox-image="./assets/images/category-01/design-06.jpg"
-                                data-lightbox-category="Event Visuals"
-                                data-lightbox-index="06"
-                                aria-label="Ver diseño 6 de Event Visuals"
+                                data-image="assets/category-01/img-05.jpg"
+                                aria-label="Ver diseño 5 en pantalla completa"
                             >
-
                                 <img
-                                    src="./assets/images/category-01/design-06.jpg"
-                                    alt="Diseño gráfico de evento 06"
+                                    src="assets/category-01/img-05.jpg"
+                                    alt="Diseño de portfolio 05"
                                     loading="lazy"
                                 >
-
-                                <span class="portfolio-card__number">
-                                    06
-                                </span>
-
                             </button>
 
+
+                            <button
+                                class="portfolio-slide"
+                                type="button"
+                                data-image="assets/category-01/img-06.jpg"
+                                aria-label="Ver diseño 6 en pantalla completa"
+                            >
+                                <img
+                                    src="assets/category-01/img-06.jpg"
+                                    alt="Diseño de portfolio 06"
+                                    loading="lazy"
+                                >
+                            </button>
 
                         </div>
 
                     </div>
 
 
-                    <div class="carousel__controls">
+                    <div class="carousel-controls">
 
-                        <button
-                            class="carousel__arrow carousel__arrow--prev"
-                            type="button"
-                            data-carousel-prev
-                            aria-label="Diseño anterior"
-                        >
-                            ←
-                        </button>
+                        <div class="carousel-buttons">
 
+                            <button
+                                class="carousel-arrow carousel-prev"
+                                type="button"
+                                aria-label="Diseño anterior"
+                            >
+                                ←
+                            </button>
 
-                        <div
-                            class="carousel__status"
-                            aria-live="polite"
-                        >
-
-                            <span data-carousel-current>
-                                01
-                            </span>
-
-                            <span>
-                                /
-                            </span>
-
-                            <span data-carousel-total>
-                                06
-                            </span>
+                            <button
+                                class="carousel-arrow carousel-next"
+                                type="button"
+                                aria-label="Diseño siguiente"
+                            >
+                                →
+                            </button>
 
                         </div>
 
 
-                        <button
-                            class="carousel__arrow carousel__arrow--next"
-                            type="button"
-                            data-carousel-next
-                            aria-label="Diseño siguiente"
-                        >
-                            →
-                        </button>
+                        <div class="carousel-progress">
+
+                            <span class="carousel-current">
+                                01
+                            </span>
+
+                            <span class="carousel-line"></span>
+
+                            <span class="carousel-total">
+                                06
+                            </span>
+
+                        </div>
 
                     </div>
 
@@ -513,231 +360,170 @@
 
 
             <!-- =================================================
-                 CATEGORÍA 02
-                 SOCIAL & DIGITAL
+                 CATEGORY 02
             ================================================== -->
 
-            <section
-                class="portfolio-category"
-                id="social-digital"
-            >
+            <section class="portfolio-category">
 
                 <div class="category-heading">
 
-                    <div class="category-heading__number">
-                        02
-                    </div>
+                    <div>
 
-                    <div class="category-heading__content">
-
-                        <h3>
-                            Social & Digital
-                        </h3>
-
-                        <p>
-                            Contenido y adaptaciones desarrolladas
-                            para comunicación y plataformas digitales.
+                        <p class="eyebrow">
+                            CATEGORÍA 02
                         </p>
 
+                        <h2>
+                            Campañas y comunicación
+                        </h2>
+
                     </div>
+
+
+                    <p>
+                        Desarrollo de propuestas gráficas orientadas
+                        a campañas, comunicación comercial y piezas
+                        que necesitan captar atención rápidamente.
+                    </p>
 
                 </div>
 
 
                 <div
-                    class="carousel"
+                    class="portfolio-carousel"
                     data-carousel
-                    data-category="02"
+                    aria-label="Campañas y comunicación"
                 >
 
-                    <div
-                        class="carousel__viewport"
-                        data-carousel-viewport
-                    >
+                    <div class="carousel-viewport">
 
-                        <div
-                            class="carousel__track"
-                            data-carousel-track
-                        >
+                        <div class="carousel-track">
 
 
                             <button
-                                class="portfolio-card"
+                                class="portfolio-slide"
                                 type="button"
-                                data-lightbox-image="./assets/images/category-02/design-01.jpg"
-                                data-lightbox-category="Social & Digital"
-                                data-lightbox-index="01"
-                                aria-label="Ver diseño 1 de Social & Digital"
+                                data-image="assets/category-02/img-07.jpg"
+                                aria-label="Ver diseño 7 en pantalla completa"
                             >
-
                                 <img
-                                    src="./assets/images/category-02/design-01.jpg"
-                                    alt="Diseño digital 01"
+                                    src="assets/category-02/img-07.jpg"
+                                    alt="Diseño de portfolio 07"
                                     loading="lazy"
                                 >
-
-                                <span class="portfolio-card__number">
-                                    01
-                                </span>
-
                             </button>
 
 
                             <button
-                                class="portfolio-card"
+                                class="portfolio-slide"
                                 type="button"
-                                data-lightbox-image="./assets/images/category-02/design-02.jpg"
-                                data-lightbox-category="Social & Digital"
-                                data-lightbox-index="02"
-                                aria-label="Ver diseño 2 de Social & Digital"
+                                data-image="assets/category-02/img-08.jpg"
+                                aria-label="Ver diseño 8 en pantalla completa"
                             >
-
                                 <img
-                                    src="./assets/images/category-02/design-02.jpg"
-                                    alt="Diseño digital 02"
+                                    src="assets/category-02/img-08.jpg"
+                                    alt="Diseño de portfolio 08"
                                     loading="lazy"
                                 >
-
-                                <span class="portfolio-card__number">
-                                    02
-                                </span>
-
                             </button>
 
 
                             <button
-                                class="portfolio-card"
+                                class="portfolio-slide"
                                 type="button"
-                                data-lightbox-image="./assets/images/category-02/design-03.jpg"
-                                data-lightbox-category="Social & Digital"
-                                data-lightbox-index="03"
-                                aria-label="Ver diseño 3 de Social & Digital"
+                                data-image="assets/category-02/img-09.jpg"
+                                aria-label="Ver diseño 9 en pantalla completa"
                             >
-
                                 <img
-                                    src="./assets/images/category-02/design-03.jpg"
-                                    alt="Diseño digital 03"
+                                    src="assets/category-02/img-09.jpg"
+                                    alt="Diseño de portfolio 09"
                                     loading="lazy"
                                 >
-
-                                <span class="portfolio-card__number">
-                                    03
-                                </span>
-
                             </button>
 
 
                             <button
-                                class="portfolio-card"
+                                class="portfolio-slide"
                                 type="button"
-                                data-lightbox-image="./assets/images/category-02/design-04.jpg"
-                                data-lightbox-category="Social & Digital"
-                                data-lightbox-index="04"
-                                aria-label="Ver diseño 4 de Social & Digital"
+                                data-image="assets/category-02/img-10.jpg"
+                                aria-label="Ver diseño 10 en pantalla completa"
                             >
-
                                 <img
-                                    src="./assets/images/category-02/design-04.jpg"
-                                    alt="Diseño digital 04"
+                                    src="assets/category-02/img-10.jpg"
+                                    alt="Diseño de portfolio 10"
                                     loading="lazy"
                                 >
-
-                                <span class="portfolio-card__number">
-                                    04
-                                </span>
-
                             </button>
 
 
                             <button
-                                class="portfolio-card"
+                                class="portfolio-slide"
                                 type="button"
-                                data-lightbox-image="./assets/images/category-02/design-05.jpg"
-                                data-lightbox-category="Social & Digital"
-                                data-lightbox-index="05"
-                                aria-label="Ver diseño 5 de Social & Digital"
+                                data-image="assets/category-02/img-11.jpg"
+                                aria-label="Ver diseño 11 en pantalla completa"
                             >
-
                                 <img
-                                    src="./assets/images/category-02/design-05.jpg"
-                                    alt="Diseño digital 05"
+                                    src="assets/category-02/img-11.jpg"
+                                    alt="Diseño de portfolio 11"
                                     loading="lazy"
                                 >
-
-                                <span class="portfolio-card__number">
-                                    05
-                                </span>
-
                             </button>
 
 
                             <button
-                                class="portfolio-card"
+                                class="portfolio-slide"
                                 type="button"
-                                data-lightbox-image="./assets/images/category-02/design-06.jpg"
-                                data-lightbox-category="Social & Digital"
-                                data-lightbox-index="06"
-                                aria-label="Ver diseño 6 de Social & Digital"
+                                data-image="assets/category-02/img-12.jpg"
+                                aria-label="Ver diseño 12 en pantalla completa"
                             >
-
                                 <img
-                                    src="./assets/images/category-02/design-06.jpg"
-                                    alt="Diseño digital 06"
+                                    src="assets/category-02/img-12.jpg"
+                                    alt="Diseño de portfolio 12"
                                     loading="lazy"
                                 >
-
-                                <span class="portfolio-card__number">
-                                    06
-                                </span>
-
                             </button>
-
 
                         </div>
 
                     </div>
 
 
-                    <div class="carousel__controls">
+                    <div class="carousel-controls">
 
-                        <button
-                            class="carousel__arrow carousel__arrow--prev"
-                            type="button"
-                            data-carousel-prev
-                            aria-label="Diseño anterior"
-                        >
-                            ←
-                        </button>
+                        <div class="carousel-buttons">
 
+                            <button
+                                class="carousel-arrow carousel-prev"
+                                type="button"
+                                aria-label="Diseño anterior"
+                            >
+                                ←
+                            </button>
 
-                        <div
-                            class="carousel__status"
-                            aria-live="polite"
-                        >
-
-                            <span data-carousel-current>
-                                01
-                            </span>
-
-                            <span>
-                                /
-                            </span>
-
-                            <span data-carousel-total>
-                                06
-                            </span>
+                            <button
+                                class="carousel-arrow carousel-next"
+                                type="button"
+                                aria-label="Diseño siguiente"
+                            >
+                                →
+                            </button>
 
                         </div>
 
 
-                        <button
-                            class="carousel__arrow carousel__arrow--next"
-                            type="button"
-                            data-carousel-next
-                            aria-label="Diseño siguiente"
-                        >
-                            →
-                        </button>
+                        <div class="carousel-progress">
+
+                            <span class="carousel-current">
+                                01
+                            </span>
+
+                            <span class="carousel-line"></span>
+
+                            <span class="carousel-total">
+                                06
+                            </span>
+
+                        </div>
 
                     </div>
 
@@ -748,231 +534,170 @@
 
 
             <!-- =================================================
-                 CATEGORÍA 03
-                 BRANDING & CAMPAIGNS
+                 CATEGORY 03
             ================================================== -->
 
-            <section
-                class="portfolio-category"
-                id="branding-campaigns"
-            >
+            <section class="portfolio-category">
 
                 <div class="category-heading">
 
-                    <div class="category-heading__number">
-                        03
-                    </div>
+                    <div>
 
-                    <div class="category-heading__content">
-
-                        <h3>
-                            Branding & Campaigns
-                        </h3>
-
-                        <p>
-                            Identidad visual, campañas y aplicaciones
-                            desarrolladas para marcas y proyectos.
+                        <p class="eyebrow">
+                            CATEGORÍA 03
                         </p>
 
+                        <h2>
+                            Conceptos visuales
+                        </h2>
+
                     </div>
+
+
+                    <p>
+                        Exploraciones gráficas y composiciones donde
+                        tipografía, imagen y color trabajan en conjunto
+                        para construir una identidad visual.
+                    </p>
 
                 </div>
 
 
                 <div
-                    class="carousel"
+                    class="portfolio-carousel"
                     data-carousel
-                    data-category="03"
+                    aria-label="Conceptos visuales"
                 >
 
-                    <div
-                        class="carousel__viewport"
-                        data-carousel-viewport
-                    >
+                    <div class="carousel-viewport">
 
-                        <div
-                            class="carousel__track"
-                            data-carousel-track
-                        >
+                        <div class="carousel-track">
 
 
                             <button
-                                class="portfolio-card"
+                                class="portfolio-slide"
                                 type="button"
-                                data-lightbox-image="./assets/images/category-03/design-01.jpg"
-                                data-lightbox-category="Branding & Campaigns"
-                                data-lightbox-index="01"
-                                aria-label="Ver diseño 1 de Branding & Campaigns"
+                                data-image="assets/category-03/img-13.jpg"
+                                aria-label="Ver diseño 13 en pantalla completa"
                             >
-
                                 <img
-                                    src="./assets/images/category-03/design-01.jpg"
-                                    alt="Diseño de branding 01"
+                                    src="assets/category-03/img-13.jpg"
+                                    alt="Diseño de portfolio 13"
                                     loading="lazy"
                                 >
-
-                                <span class="portfolio-card__number">
-                                    01
-                                </span>
-
                             </button>
 
 
                             <button
-                                class="portfolio-card"
+                                class="portfolio-slide"
                                 type="button"
-                                data-lightbox-image="./assets/images/category-03/design-02.jpg"
-                                data-lightbox-category="Branding & Campaigns"
-                                data-lightbox-index="02"
-                                aria-label="Ver diseño 2 de Branding & Campaigns"
+                                data-image="assets/category-03/img-14.jpg"
+                                aria-label="Ver diseño 14 en pantalla completa"
                             >
-
                                 <img
-                                    src="./assets/images/category-03/design-02.jpg"
-                                    alt="Diseño de branding 02"
+                                    src="assets/category-03/img-14.jpg"
+                                    alt="Diseño de portfolio 14"
                                     loading="lazy"
                                 >
-
-                                <span class="portfolio-card__number">
-                                    02
-                                </span>
-
                             </button>
 
 
                             <button
-                                class="portfolio-card"
+                                class="portfolio-slide"
                                 type="button"
-                                data-lightbox-image="./assets/images/category-03/design-03.jpg"
-                                data-lightbox-category="Branding & Campaigns"
-                                data-lightbox-index="03"
-                                aria-label="Ver diseño 3 de Branding & Campaigns"
+                                data-image="assets/category-03/img-15.jpg"
+                                aria-label="Ver diseño 15 en pantalla completa"
                             >
-
                                 <img
-                                    src="./assets/images/category-03/design-03.jpg"
-                                    alt="Diseño de branding 03"
+                                    src="assets/category-03/img-15.jpg"
+                                    alt="Diseño de portfolio 15"
                                     loading="lazy"
                                 >
-
-                                <span class="portfolio-card__number">
-                                    03
-                                </span>
-
                             </button>
 
 
                             <button
-                                class="portfolio-card"
+                                class="portfolio-slide"
                                 type="button"
-                                data-lightbox-image="./assets/images/category-03/design-04.jpg"
-                                data-lightbox-category="Branding & Campaigns"
-                                data-lightbox-index="04"
-                                aria-label="Ver diseño 4 de Branding & Campaigns"
+                                data-image="assets/category-03/img-16.jpg"
+                                aria-label="Ver diseño 16 en pantalla completa"
                             >
-
                                 <img
-                                    src="./assets/images/category-03/design-04.jpg"
-                                    alt="Diseño de branding 04"
+                                    src="assets/category-03/img-16.jpg"
+                                    alt="Diseño de portfolio 16"
                                     loading="lazy"
                                 >
-
-                                <span class="portfolio-card__number">
-                                    04
-                                </span>
-
                             </button>
 
 
                             <button
-                                class="portfolio-card"
+                                class="portfolio-slide"
                                 type="button"
-                                data-lightbox-image="./assets/images/category-03/design-05.jpg"
-                                data-lightbox-category="Branding & Campaigns"
-                                data-lightbox-index="05"
-                                aria-label="Ver diseño 5 de Branding & Campaigns"
+                                data-image="assets/category-03/img-17.jpg"
+                                aria-label="Ver diseño 17 en pantalla completa"
                             >
-
                                 <img
-                                    src="./assets/images/category-03/design-05.jpg"
-                                    alt="Diseño de branding 05"
+                                    src="assets/category-03/img-17.jpg"
+                                    alt="Diseño de portfolio 17"
                                     loading="lazy"
                                 >
-
-                                <span class="portfolio-card__number">
-                                    05
-                                </span>
-
                             </button>
 
 
                             <button
-                                class="portfolio-card"
+                                class="portfolio-slide"
                                 type="button"
-                                data-lightbox-image="./assets/images/category-03/design-06.jpg"
-                                data-lightbox-category="Branding & Campaigns"
-                                data-lightbox-index="06"
-                                aria-label="Ver diseño 6 de Branding & Campaigns"
+                                data-image="assets/category-03/img-18.jpg"
+                                aria-label="Ver diseño 18 en pantalla completa"
                             >
-
                                 <img
-                                    src="./assets/images/category-03/design-06.jpg"
-                                    alt="Diseño de branding 06"
+                                    src="assets/category-03/img-18.jpg"
+                                    alt="Diseño de portfolio 18"
                                     loading="lazy"
                                 >
-
-                                <span class="portfolio-card__number">
-                                    06
-                                </span>
-
                             </button>
-
 
                         </div>
 
                     </div>
 
 
-                    <div class="carousel__controls">
+                    <div class="carousel-controls">
 
-                        <button
-                            class="carousel__arrow carousel__arrow--prev"
-                            type="button"
-                            data-carousel-prev
-                            aria-label="Diseño anterior"
-                        >
-                            ←
-                        </button>
+                        <div class="carousel-buttons">
 
+                            <button
+                                class="carousel-arrow carousel-prev"
+                                type="button"
+                                aria-label="Diseño anterior"
+                            >
+                                ←
+                            </button>
 
-                        <div
-                            class="carousel__status"
-                            aria-live="polite"
-                        >
-
-                            <span data-carousel-current>
-                                01
-                            </span>
-
-                            <span>
-                                /
-                            </span>
-
-                            <span data-carousel-total>
-                                06
-                            </span>
+                            <button
+                                class="carousel-arrow carousel-next"
+                                type="button"
+                                aria-label="Diseño siguiente"
+                            >
+                                →
+                            </button>
 
                         </div>
 
 
-                        <button
-                            class="carousel__arrow carousel__arrow--next"
-                            type="button"
-                            data-carousel-next
-                            aria-label="Diseño siguiente"
-                        >
-                            →
-                        </button>
+                        <div class="carousel-progress">
+
+                            <span class="carousel-current">
+                                01
+                            </span>
+
+                            <span class="carousel-line"></span>
+
+                            <span class="carousel-total">
+                                06
+                            </span>
+
+                        </div>
 
                     </div>
 
@@ -980,7 +705,7 @@
 
             </section>
 
-        </section>
+        </div>
 
 
 
@@ -993,56 +718,55 @@
             id="contacto"
         >
 
-            <div class="contact__content">
+            <div class="contact-copy">
 
                 <p class="eyebrow">
-                    CONTACT
+                    CONTACTO
                 </p>
 
                 <h2>
-                    ¿Tienes un proyecto en mente?
+                    ¿Trabajamos en algo juntos?
                 </h2>
 
                 <p>
-                    Si necesitas desarrollar una pieza gráfica,
-                    identidad visual o material para un evento,
-                    puedes contactarme directamente.
+                    Si necesitas una pieza gráfica, contenido para
+                    redes o quieres conversar sobre una idea,
+                    puedes escribirme directamente.
                 </p>
 
+            </div>
 
-                <div class="contact__links">
 
-                    <a
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Instagram ↗
-                    </a>
-
-                    <a
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        WhatsApp ↗
-                    </a>
-
-                    <a href="mailto:correo@ejemplo.com">
-                        Email ↗
-                    </a>
-
-                </div>
-
+            <div class="contact-actions">
 
                 <a
-                    href="https://byfostercl.github.io/"
-                    class="contact__foster-link"
+                    href="https://wa.me/56968336725?text=Hola%20Mat%C3%ADas%2C%20vi%20tu%20portfolio%20de%20dise%C3%B1o%20By%20Foster%20y%20me%20gustar%C3%ADa%20conversar%20contigo."
+                    class="button button-primary"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    También desarrollo soluciones web y digitales
-                    <span>→ By Foster</span>
+                    WhatsApp
+                    <span>↗</span>
+                </a>
+
+
+                <a
+                    href="https://www.instagram.com/byfostercl/"
+                    class="button button-secondary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Instagram
+                    <span>↗</span>
+                </a>
+
+
+                <a
+                    href="mailto:mbaezponce@gmail.com?subject=Contacto%20desde%20Portfolio%20By%20Foster"
+                    class="button button-secondary"
+                >
+                    Correo
+                    <span>↗</span>
                 </a>
 
             </div>
@@ -1053,127 +777,103 @@
 
 
 
-    <!-- =================================================
+    <!-- =====================================================
          FOOTER
-    ================================================== -->
+    ====================================================== -->
 
     <footer class="site-footer">
 
-        <p>
-            © <span id="current-year"></span>
-            Matías Báez · Foster / Design
-        </p>
+        <div>
 
-        <a href="#inicio">
-            Volver arriba ↑
+            <strong>
+                BY FOSTER
+            </strong>
+
+            <p>
+                Matías Báez · Portfolio de diseño
+            </p>
+
+        </div>
+
+
+        <a
+            href="https://byfostercl.github.io/"
+            class="footer-main-site"
+        >
+            Ver sitio como desarrollador
+            <span>↗</span>
         </a>
+
+
+        <p class="copyright">
+            © 2026 By Foster.
+        </p>
 
     </footer>
 
 
 
-    <!-- =================================================
-         LIGHTBOX
-    ================================================== -->
+    <!-- =====================================================
+         FULLSCREEN IMAGE VIEWER
+    ====================================================== -->
 
     <div
-        class="lightbox"
-        data-lightbox
+        class="image-viewer"
+        id="image-viewer"
         aria-hidden="true"
         role="dialog"
         aria-modal="true"
-        aria-label="Visualización ampliada del diseño"
+        aria-label="Vista ampliada del diseño"
     >
 
-        <div
-            class="lightbox__backdrop"
-            data-lightbox-close
-        ></div>
+        <button
+            class="viewer-close"
+            type="button"
+            aria-label="Cerrar imagen"
+        >
+            ×
+        </button>
 
 
-        <div class="lightbox__content">
+        <button
+            class="viewer-arrow viewer-prev"
+            type="button"
+            aria-label="Imagen anterior"
+        >
+            ←
+        </button>
 
 
-            <!-- CERRAR -->
+        <div class="viewer-image-wrapper">
 
-            <button
-                class="lightbox__close"
-                type="button"
-                data-lightbox-close
-                aria-label="Cerrar imagen"
+            <img
+                class="viewer-image"
+                src=""
+                alt="Diseño ampliado"
             >
-                ×
-            </button>
 
-
-            <!-- IMAGEN -->
-
-            <div class="lightbox__image-wrapper">
-
-                <img
-                    class="lightbox__image"
-                    data-lightbox-main-image
-                    src=""
-                    alt=""
-                >
-
-            </div>
-
-
-            <!-- INFORMACIÓN -->
-
-            <div class="lightbox__footer">
-
-                <div class="lightbox__meta">
-
-                    <span data-lightbox-category-name>
-                        Category
-                    </span>
-
-                    <span data-lightbox-counter>
-                        01 / 06
-                    </span>
-
-                </div>
-
-
-                <div class="lightbox__navigation">
-
-                    <button
-                        type="button"
-                        data-lightbox-prev
-                        aria-label="Imagen anterior"
-                    >
-                        ←
-                    </button>
-
-                    <button
-                        type="button"
-                        data-lightbox-next
-                        aria-label="Imagen siguiente"
-                    >
-                        →
-                    </button>
-
-                </div>
-
+            <div class="viewer-counter">
+                <span class="viewer-current">01</span>
+                <span>/</span>
+                <span class="viewer-total">06</span>
             </div>
 
         </div>
+
+
+        <button
+            class="viewer-arrow viewer-next"
+            type="button"
+            aria-label="Imagen siguiente"
+        >
+            →
+        </button>
 
     </div>
 
 
 
-    <!-- =================================================
-         JAVASCRIPT
-    ================================================== -->
-
-    <script
-        src="./assets/js/app.js"
-        defer
-    ></script>
-
+    <script src="assets/app.js"></script>
 
 </body>
 
